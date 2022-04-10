@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PADME DASHBOARD</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/iconfonts/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="http://www.urbanui.com/" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index-2.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index-2.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Rechercher" aria-label="Search">
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+<!--
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="fas fa-bell mx-0"></i>
+              <span class="count">16</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 16 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="fas fa-exclamation-circle mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
+                  <p class="font-weight-light small-text">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="fas fa-wrench mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="far fa-envelope mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-envelope mx-0"></i>
+              <span class="count">25</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <div class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                </p>
+                <span class="badge badge-info badge-pill float-right">View all</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
+                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
+                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
+                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+-->
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="data:image/png;base64,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" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                  Option 1
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                Déconnexion
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="data:image/png;base64,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" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  Admin
+                </p>
+                <p class="designation">
+                  Administrateur
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index-2.html">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/widgets.html">
+              <i class="fa fa-puzzle-piece menu-icon"></i>
+              <span class="menu-title">Statistiques</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              Dashboard
+            </h3>
+          </div>
+          <div class="row grid-margin">
+            <div class="col-12">
+              <div class="card card-statistics">
+                <div class="card-body">
+                  <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fa fa-user mr-2"></i>
+                          Utilisateurs
+                        </p>
+                        <h2>54000</h2>
+                        <label class="badge badge-outline-light badge-pill">2.7% <i class="fa fa-arrow-up"></i></label>
+                      </div>
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fas fa-hourglass-half mr-2"></i>
+                          Transactions
+                        </p>
+                        <h2>123.50</h2>
+                        <label class="badge badge-outline-light badge-pill">30% <i class="fa fa-arrow-down"></i></label>
+                      </div>
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fas fa-cloud-download-alt mr-2"></i>
+                          Crédits
+                        </p>
+                        <h2>3500</h2>
+                        <label class="badge badge-outline-light badge-pill">12% <i class="fa fa-arrow-up"></i></label>
+                      </div>
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fas fa-check-circle mr-2"></i>
+                          Update
+                        </p>
+                        <h2>7500</h2>
+                        <label class="badge badge-outline-light badge-pill">57% <i class="fa fa-arrow-up"></i></label>
+                      </div>
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fas fa-chart-line mr-2"></i>
+                          Agents
+                        </p>
+                        <h2>9000</h2>
+                        <label class="badge badge-outline-light badge-pill">10% <i class="fa fa-arrow-up"></i></label>
+                      </div>
+                      <div class="statistics-item">
+                        <p>
+                          <i class="icon-sm fas fa-circle-notch mr-2"></i>
+                          Dématérialisés
+                        </p>
+                        <h2>7500</h2>
+                        <label class="badge badge-outline-light badge-pill">16% <i class="fa fa-arrow-down"></i></label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fas fa-exchange-alt"></i>
+                    Transactions
+                  </h4>
+                  <canvas id="orders-chart"></canvas>
+                  <div id="orders-chart-legend" class="orders-chart-legend"></div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fas fa-chart-line"></i>
+                    Collectes par mois
+                  </h4>
+                  <h2 class="mb-5">56000 <span class="text-muted h4 font-weight-normal">Sales</span></h2>
+                  <canvas id="sales-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--
+          <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <h4 class="card-title">
+                    <i class="fas fa-chart-pie"></i>
+                    Something
+                  </h4>
+                  <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                    <canvas id="sales-status-chart" class="mt-3"></canvas>
+                    <div class="pt-4">
+                      <div id="sales-status-chart-legend" class="sales-status-chart-legend"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="far fa-futbol"></i>
+                    Another thing
+                  </h4>
+                  <ul class="solid-bullet-list">
+                    <li>
+                      <h5>4 people shared a post
+                        <span class="float-right text-muted font-weight-normal small">8:30 AM</span>
+                      </h5>
+                      <p class="text-muted">It was an awesome work!</p>
+                      <div class="image-layers">
+                        <div class="img-sm profile-image-text bg-warning rounded-circle image-layer-item">M</div>
+                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face3.jpg" alt="profile"/>
+                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face5.jpg" alt="profile"/>
+                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face8.jpg" alt="profile"/>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>Stella posted in a group
+                        <span class="float-right text-muted font-weight-normal small">11:40 AM</span>
+                      </h5>
+                      <p class="text-muted">The team has done a great job</p>
+                    </li>
+                    <li>
+                      <h5>Dobrick posted in material
+                        <span class="float-right text-muted font-weight-normal small">4:30 PM</span>
+                      </h5>
+                      <p class="text-muted">Great work. Keep it up!</p>
+                    </li>
+                  </ul>
+                  <div class="border-top pt-3">
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-dark">More</button>
+                      <button class="btn btn-primary btn-icon-text">
+                        Add new task
+                        <i class="btn-icon-append fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <h4 class="card-title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Something
+                  </h4>
+                  <p class="card-description">Lorem ipsum dolor sit amet</p>
+                  <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                    <canvas id="daily-sales-chart" class="mt-3 mb-3 mb-md-0"></canvas>
+                    <div id="daily-sales-chart-legend" class="daily-sales-chart-legend pt-4 border-top"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+-->
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018. Tous droits réservés</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">BFT</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/misc.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+</html>
