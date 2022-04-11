@@ -1,432 +1,972 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html class="no-js " lang="en">
 
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>PADME DASHBOARD</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/iconfonts/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="http://www.urbanui.com/" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+    <title>PADME Dashboard</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+    <link rel="stylesheet" href="assets/plugins/charts-c3/plugin.css"/>
+
+    <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css"/>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
 </head>
-<body>
-  <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index-2.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index-2.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" alt="logo"/></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-stretch">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="fas fa-bars"></span>
-        </button>
-        <ul class="navbar-nav">
-          <li class="nav-item nav-search d-none d-md-flex">
-            <div class="nav-link">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-search"></i>
-                  </span>
-                </div>
-                <input type="text" class="form-control" placeholder="Rechercher" aria-label="Search">
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="fas fa-bell mx-0"></i>
-              <span class="count">16</span>
-            </a>
-<!--
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 16 new notifications
-                </p>
-                <span class="badge badge-pill badge-warning float-right">View all</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-danger">
-                    <i class="fas fa-exclamation-circle mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
-                  <p class="font-weight-light small-text">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="fas fa-wrench mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">Settings</h6>
-                  <p class="font-weight-light small-text">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="far fa-envelope mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
-                  <p class="font-weight-light small-text">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
--->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-envelope mx-0"></i>
-              <span class="count">25</span>
-            </a>
-<!--
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-              <div class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
-                </p>
-                <span class="badge badge-info badge-pill float-right">View all</span>
-              </div>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
-                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    The meeting is cancelled
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
-                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    New product launch
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
-                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    Upcoming board meeting
-                  </p>
-                </div>
-              </a>
-            </div>
--->
-          </li>
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="data:image/png;base64,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" alt="profile"/>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="fas fa-cog text-primary"></i>
-                  Option 1
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item">
-                <i class="fas fa-power-off text-primary"></i>
-                Déconnexion
-              </a>
-            </div>
-          </li>
-          <li class="nav-item nav-settings d-none d-lg-block">
-            <a class="nav-link" href="#">
-              <i class="fas fa-ellipsis-h"></i>
-            </a>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          <span class="fas fa-bars"></span>
-        </button>
-      </div>
-    </nav>
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
 
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item nav-profile">
-            <div class="nav-link">
-              <div class="profile-image">
-                <img src="data:image/png;base64,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" alt="image"/>
-              </div>
-              <div class="profile-name">
-                <p class="name">
-                  Admin
-                </p>
-                <p class="designation">
-                  Administrateur
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index-2.html">
-              <i class="fa fa-home menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/widgets.html">
-              <i class="fa fa-puzzle-piece menu-icon"></i>
-              <span class="menu-title">Statistiques</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="page-header">
-            <h3 class="page-title">
-              Dashboard
-            </h3>
-          </div>
-          <div class="row grid-margin">
-            <div class="col-12">
-              <div class="card card-statistics">
-                <div class="card-body">
-                  <div class="row">
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fa fa-user mr-2"></i>
-                          Utilisateurs
-                        </p>
-                        <h2>54000</h2>
-                        <label class="badge badge-outline-light badge-pill">2.7% <i class="fa fa-arrow-up"></i></label>
-                      </div>
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fas fa-hourglass-half mr-2"></i>
-                          Transactions
-                        </p>
-                        <h2>123.50</h2>
-                        <label class="badge badge-outline-light badge-pill">30% <i class="fa fa-arrow-down"></i></label>
-                      </div>
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fas fa-cloud-download-alt mr-2"></i>
-                          Crédits
-                        </p>
-                        <h2>3500</h2>
-                        <label class="badge badge-outline-light badge-pill">12% <i class="fa fa-arrow-up"></i></label>
-                      </div>
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fas fa-check-circle mr-2"></i>
-                          Update
-                        </p>
-                        <h2>7500</h2>
-                        <label class="badge badge-outline-light badge-pill">57% <i class="fa fa-arrow-up"></i></label>
-                      </div>
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fas fa-chart-line mr-2"></i>
-                          Agents
-                        </p>
-                        <h2>9000</h2>
-                        <label class="badge badge-outline-light badge-pill">10% <i class="fa fa-arrow-up"></i></label>
-                      </div>
-                      <div class="statistics-item col-6 col-md">
-                        <p>
-                          <i class="icon-sm fas fa-circle-notch mr-2"></i>
-                          Dématérialisés
-                        </p>
-                        <h2>7500</h2>
-                        <label class="badge badge-outline-light badge-pill">16% <i class="fa fa-arrow-down"></i></label>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-exchange-alt"></i>
-                    Transactions
-                  </h4>
-                  <canvas id="orders-chart"></canvas>
-                  <div id="orders-chart-legend" class="orders-chart-legend"></div>                  
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-chart-line"></i>
-                    Collectes par mois
-                  </h4>
-                  <h2 class="mb-5">56000 <span class="text-muted h4 font-weight-normal">Sales</span></h2>
-                  <canvas id="sales-chart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--
-          <div class="row">
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body d-flex flex-column">
-                  <h4 class="card-title">
-                    <i class="fas fa-chart-pie"></i>
-                    Something
-                  </h4>
-                  <div class="flex-grow-1 d-flex flex-column justify-content-between">
-                    <canvas id="sales-status-chart" class="mt-3"></canvas>
-                    <div class="pt-4">
-                      <div id="sales-status-chart-legend" class="sales-status-chart-legend"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="far fa-futbol"></i>
-                    Another thing
-                  </h4>
-                  <ul class="solid-bullet-list">
-                    <li>
-                      <h5>4 people shared a post
-                        <span class="float-right text-muted font-weight-normal small">8:30 AM</span>
-                      </h5>
-                      <p class="text-muted">It was an awesome work!</p>
-                      <div class="image-layers">
-                        <div class="img-sm profile-image-text bg-warning rounded-circle image-layer-item">M</div>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face3.jpg" alt="profile"/>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face5.jpg" alt="profile"/>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face8.jpg" alt="profile"/>
-                      </div>
-                    </li>
-                    <li>
-                      <h5>Stella posted in a group
-                        <span class="float-right text-muted font-weight-normal small">11:40 AM</span>
-                      </h5>
-                      <p class="text-muted">The team has done a great job</p>
-                    </li>
-                    <li>
-                      <h5>Dobrick posted in material
-                        <span class="float-right text-muted font-weight-normal small">4:30 PM</span>
-                      </h5>
-                      <p class="text-muted">Great work. Keep it up!</p>
-                    </li>
-                  </ul>
-                  <div class="border-top pt-3">
-                    <div class="d-flex justify-content-between">
-                      <button class="btn btn-outline-dark">More</button>
-                      <button class="btn btn-primary btn-icon-text">
-                        Add new task
-                        <i class="btn-icon-append fas fa-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body d-flex flex-column">
-                  <h4 class="card-title">
-                    <i class="fas fa-tachometer-alt"></i>
-                    Something
-                  </h4>
-                  <p class="card-description">Lorem ipsum dolor sit amet</p>
-                  <div class="flex-grow-1 d-flex flex-column justify-content-between">
-                    <canvas id="daily-sales-chart" class="mt-3 mb-3 mb-md-0"></canvas>
-                    <div id="daily-sales-chart-legend" class="daily-sales-chart-legend pt-4 border-top"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
--->
+<body class="theme-blush">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48" height="48" alt="Aero">
         </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018. Tous droits réservés</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">BFT</span>
-          </div>
-        </footer>
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
+        <p>Please wait...</p>
     </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
+</div>
 
-  <!-- plugins:js -->
-  <script src="vendors/js/vendor.bundle.base.js"></script>
-  <script src="vendors/js/vendor.bundle.addons.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/misc.js"></script>
-  <script src="js/settings.js"></script>
-  <script src="js/todolist.js"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="js/dashboard.js"></script>
-  <!-- End custom js for this page-->
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<!-- Main Search -->
+<!--<div id="search">
+    <button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
+    <form>
+        <input type="search" value="" placeholder="Rechercher"/>
+        <button type="submit" class="btn btn-primary">R</button>
+    </form>
+</div>-->
+
+<!-- Right Icon menu Sidebar -->
+<div class="navbar-right">
+    <ul class="navbar-nav">
+        <li><a href="#search" class="main_search" title="Search..."><i class="zmdi zmdi-search"></i></a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-toggle="dropdown" role="button"><i
+                    class="zmdi zmdi-apps"></i></a>
+            <ul class="dropdown-menu slideUp2">
+                <li class="header">App Sortcute</li>
+                <li class="body">
+                    <ul class="menu app_sortcut list-unstyled">
+                        <li>
+                            <a href="image-gallery.html">
+                                <div class="icon-circle mb-2 bg-blue"><i class="zmdi zmdi-camera"></i></div>
+                                <p class="mb-0">Photos</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle mb-2 bg-amber"><i class="zmdi zmdi-translate"></i></div>
+                                <p class="mb-0">Translate</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="events.html">
+                                <div class="icon-circle mb-2 bg-green"><i class="zmdi zmdi-calendar"></i></div>
+                                <p class="mb-0">Calendar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <div class="icon-circle mb-2 bg-purple"><i class="zmdi zmdi-account-calendar"></i></div>
+                                <p class="mb-0">Contacts</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle mb-2 bg-red"><i class="zmdi zmdi-tag"></i></div>
+                                <p class="mb-0">News</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle mb-2 bg-grey"><i class="zmdi zmdi-map"></i></div>
+                                <p class="mb-0">Maps</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" title="Notifications" data-toggle="dropdown"
+               role="button"><i class="zmdi zmdi-notifications"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+            </a>
+            <ul class="dropdown-menu slideUp2">
+                <li class="header">Notifications</li>
+                <li class="body">
+                    <ul class="menu list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-blue"><i class="zmdi zmdi-account"></i></div>
+                                <div class="menu-info">
+                                    <h4>8 New Members joined</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 14 mins ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
+                                <div class="menu-info">
+                                    <h4>4 Sales made</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 22 mins ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-red"><i class="zmdi zmdi-delete"></i></div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy Doe</b> Deleted account</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-green"><i class="zmdi zmdi-edit"></i></div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy</b> Changed name</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 2 hours ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-grey"><i class="zmdi zmdi-comment-text"></i></div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> Commented your post</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 4 hours ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-purple"><i class="zmdi zmdi-refresh"></i></div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> Updated status</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
+                                <div class="menu-info">
+                                    <h4>Settings Updated</h4>
+                                    <p><i class="zmdi zmdi-time"></i> Yesterday </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer"><a href="javascript:void(0);">View All Notifications</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i
+                    class="zmdi zmdi-flag"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+            </a>
+            <ul class="dropdown-menu slideUp2">
+                <li class="header">Tasks List <small class="float-right"><a href="javascript:void(0);">View
+                    All</a></small></li>
+                <li class="body">
+                    <ul class="menu tasks list-unstyled">
+                        <li>
+                            <div class="progress-container progress-primary">
+                                <span class="progress-badge">eCommerce Website</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
+                                        <span class="progress-value">86%</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled team-info">
+                                    <li class="m-r-15"><small>Team</small></li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar3.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar4.jpg" alt="Avatar">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-container">
+                                <span class="progress-badge">iOS Game Dev</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                        <span class="progress-value">45%</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled team-info">
+                                    <li class="m-r-15"><small>Team</small></li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar10.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar9.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar8.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar6.jpg" alt="Avatar">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-container progress-warning">
+                                <span class="progress-badge">Home Development</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="29"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 29%;">
+                                        <span class="progress-value">29%</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled team-info">
+                                    <li class="m-r-15"><small>Team</small></li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar5.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);" class="app_calendar" title="Calendar"><i class="zmdi zmdi-calendar"></i></a>
+        </li>
+        <li><a href="javascript:void(0);" class="app_google_drive" title="Google Drive"><i
+                class="zmdi zmdi-google-drive"></i></a></li>
+        <li><a href="javascript:void(0);" class="app_group_work" title="Group Work"><i class="zmdi zmdi-group-work"></i></a>
+        </li>
+        <li><a href="javascript:void(0);" class="js-right-sidebar" title="Setting"><i
+                class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        <li><a href="sign-in.html" class="mega-menu" title="Sign Out"><i class="zmdi zmdi-power"></i></a></li>
+    </ul>
+</div>
+
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+        <a href="index.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" width="90"
+                                  alt="Aero"><span class="m-l-10"></span></a>
+    </div>
+    <div class="menu">
+        <ul class="list">
+            <li>
+                <div class="user-info">
+                    <a class="image" href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAACACAMAAADtR70aAAAANlBMVEX39/enp6eioqLk5OT6+vr9/f2fn5/t7e2qqqrz8/PW1ta6urrp6ena2trNzc3g4OC0tLTCwsI6LbR0AAADVklEQVRoge2bC5KsIAxFFQN+G3X/mx21+3WjI5CfTr2qvhs4dSEmIWBRfPXVJnjpPp617TA+uu4xDoW1N4AtVH4yzplVzrmy7+qLubb2pTHlTsZMXWsvRPblgfjiNr69xi0U/hz5xD6uoMIwRZEbdtY3ax9J5Ga2VqZa7zLMFTuoUlFMZSqMKOaiVo9ZI5GlmdSgxYSFlsYrLTB0ucANqYMOtG3wzLLsVaxaTzC6WK00qDSji1WF5E/a0c2qwq5afOi+oF5utSUaLctGDIVsov9ttRZDZzpUXFotMXZX6CyFAjbVB5qkm1ozoEYIxRe1QE5olBG8C1RYVYGWeF9QYbPEgwq7Fh5UWGj+I6h0eamFbYMKky+MHKiMuZxgOMlBXNsYUHFBtYzlFXdJ5G5Fo+FmfDNmFEPp4Wvkp6i/aMzo/YpGC0reVJVzRUWENnLkYpW2vmbWGGQR19dUCsylISQ5nXSO4tBTjHZKUEooNWrzlT8YdCxW8fVNcZCEtaq1oxsU3T9oDgct7pQqL2o74WqNxmAlEK4V1Yuip2yfpWpG0T/l8r5Opt8LhrRVzalrQE2fj9Un+C9qssbpzu8/snN8cS+5llmVSEzSM1NCNgoVj44S0Fjiv+JzeUNjPYReGT2BRp1ekIze0Ng3c6HTRPQq15dA0S1dPpmrnKbuSi4KX1sks6DxhbZZgNo3uSrja813D1CM/fHO/wxr+lHLLsCjwTaDrlFZZbCPzLoe7Lq5Fk90KhLyucoyLLT0W5kVW/LfWgB08dcUGWzT8fYW2nzXmcBOA2ONLWfoGsp56usdgJkx/jyYbWhmoU4/VMFiKRXPjgrEjdqjw9hyBvcRKrYHZ91QxLGoqZ1CCO3kECdlxtVwjtrlglifme8Vr2Cu1JRX4pMRPDWxr4rfypEa/XJY101IxUfPlyHX3HRulTRiJcudhjDr1pKik23Fv15j6myBQdIn4Ki/vhvW7SxRzRHKuD0k6ziCYb3cIOtwC8d4AcTQvrZSpvQS7Q7siVmYqnYzLs5TJ47CULrje3kqeAkGN63uvtjcErurghcm7U1bGm4q6yEZE/o+aOh212m9I+m+OFrSw6eq3Qf93Gn8CXR6/v5yhz4f6lDdpyD33qbiq6++IusHXE4tH4lCJfUAAAAASUVORK5CYII="
+                            alt="User"></a>
+                    <div class="detail">
+                        <h4>Admin</h4>
+                        <small>Admin</small>
+                    </div>
+                </div>
+            </li>
+            <li class="active open"><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Statistiques</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">Tableau</a></li>
+                    <li><a href="#">Graphes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Right Sidebar -->
+<aside id="rightsidebar" class="right-sidebar">
+    <ul class="nav nav-tabs sm">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i
+                class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="setting">
+            <div class="slim_scroll">
+                <div class="card">
+                    <h6>Theme Option</h6>
+                    <div class="light_dark">
+                        <div class="radio">
+                            <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
+                            <label for="lighttheme">Light Mode</label>
+                        </div>
+                        <div class="radio mb-0">
+                            <input type="radio" name="radio1" id="darktheme" value="dark">
+                            <label for="darktheme">Dark Mode</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h6>Color Skins</h6>
+                    <ul class="choose-skin list-unstyled">
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                        </li>
+                        <li data-theme="blush" class="active">
+                            <div class="blush"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h6>General Settings</h6>
+                    <ul class="setting-list list-unstyled">
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox1" type="checkbox">
+                                <label for="checkbox1">Report Panel Usage</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox2" type="checkbox" checked="">
+                                <label for="checkbox2">Email Redirect</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox3" type="checkbox" checked="">
+                                <label for="checkbox3">Notifications</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox4" type="checkbox">
+                                <label for="checkbox4">Auto Updates</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox5" type="checkbox" checked="">
+                                <label for="checkbox5">Offline</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox6" type="checkbox" checked="">
+                                <label for="checkbox6">Location Permission</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane right_chat" id="chat">
+            <div class="slim_scroll">
+                <div class="card">
+                    <ul class="list-unstyled">
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Sophia <small class="float-right">11:00AM</small></span>
+                                        <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Grayson <small class="float-right">11:30AM</small></span>
+                                        <span class="message">All the Lorem Ipsum generators on the</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Isabella <small class="float-right">11:31AM</small></span>
+                                        <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="me">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">John <small class="float-right">05:00PM</small></span>
+                                        <span class="message">It is a long established fact that a reader</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Alexander <small class="float-right">06:08PM</small></span>
+                                        <span class="message">Richard McClintock, a Latin professor</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Main Content -->
+
+<section class="content">
+    <div class="">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Dashboard</h2>
+                    <!--<ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
+                        <li class="breadcrumb-item active">Dashboard 1</li>
+                    </ul>-->
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <button class="btn btn-outline-success btn-icon float-right right_icon_toggle_btn" type="button"><i
+                            class="zmdi zmdi-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card">
+                            <h6>Transactions</h6>
+                            <h2>20 <small class="info">of 1Tb</small></h2>
+                            <small>2% higher than last month</small>
+                            <div class="progress">
+                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card">
+                            <h6>Crédits</h6>
+                            <h2>12% <small class="info">of 100</small></h2>
+                            <small>6% higher than last month</small>
+                            <div class="progress">
+                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38" aria-valuemin="0"
+                                     aria-valuemax="100" style="width: 38%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card">
+                            <h6>Épargne</h6>
+                            <h2>39 <small class="info">of 100</small></h2>
+                            <small>Total Registered email</small>
+                            <div class="progress">
+                                <div class="progress-bar l-purple" role="progressbar" aria-valuenow="39"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card">
+                            <h6>Collectes</h6>
+                            <h2>8 <small class="info">of 10</small></h2>
+                            <small>Total Registered Domain</small>
+                            <div class="progress">
+                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="89"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong><i class="zmdi zmdi-chart"></i> Statistiques</strong> des collectes</h2>
+                            <!--<ul class="header-dropdown">
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                        data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                        <li><a href="javascript:void(0);">Editer</a></li>
+                                        <li><a href="javascript:void(0);">Supprimer</a></li>
+                                        <li><a href="javascript:void(0);">Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="remove">
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                                </li>
+                            </ul>-->
+                        </div>
+                        <div class="body mb-2">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>2,365</h5>
+                                                <span><i class="zmdi zmdi-balance"></i> Recettes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#868e96">
+                                                5,2,3,7,6,4,8,1
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>365</h5>
+                                                <span><i class="zmdi zmdi-turning-sign"></i> Collectes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#2bcbba">
+                                                8,2,6,5,1,4,4,3
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>65</h5>
+                                                <span><i class="zmdi zmdi-alert-circle-o"></i> Requêtes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#82c885">
+                                                4,4,3,9,2,1,5,7
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>2,055</h5>
+                                                <span><i class="zmdi zmdi-print"></i> Crédits</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#45aaf2">
+                                                7,5,3,8,4,6,2,9
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card mcard_4">
+                        <div class="body">
+                            <ul class="header-dropdown list-unstyled">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                       role="button" aria-haspopup="true" aria-expanded="false"> <i
+                                            class="zmdi zmdi-menu"></i> </a>
+                                    <ul class="dropdown-menu slideUp">
+                                        <li><a href="javascript:void(0);">Edit</a></li>
+                                        <li><a href="javascript:void(0);">Delete</a></li>
+                                        <li><a href="javascript:void(0);">Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img">
+                                <img src="assets/images/lg/avatar1.jpg" class="rounded-circle" alt="profile-image">
+                            </div>
+                            <div class="user">
+                                <h5 class="mt-3 mb-1">Eliana Smith</h5>
+                                <small class="text-muted">UI/UX Desiger</small>
+                            </div>
+                            <ul class="list-unstyled social-links">
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-dribbble"></i></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-behance"></i></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card w_data_1">
+                        <div class="body">
+                            <div class="w_icon pink"><i class="zmdi zmdi-bug"></i></div>
+                            <h4 class="mt-3 mb-0">12.1k</h4>
+                            <span class="text-muted">Bugs Fixed</span>
+                            <div class="w_description text-success">
+                                <i class="zmdi zmdi-trending-up"></i>
+                                <span>15.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w_data_1">
+                        <div class="body">
+                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                            <h4 class="mt-3 mb-1">01.8k</h4>
+                            <span class="text-muted">Submitted Tickers</span>
+                            <div class="w_description text-success">
+                                <i class="zmdi zmdi-trending-up"></i>
+                                <span>95.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="chat-widget">
+                                <ul class="list-unstyled">
+                                    <li class="left">
+                                        <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>Frank 11:00AM</small></li>
+                                            <li><span class="message bg-blue">Hello, Michael</span></li>
+                                            <li><span class="message bg-blue">How are you!</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="right">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>11:10AM</small></li>
+                                            <li><span class="message">Hello, Frank</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="right">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>11:11AM</small></li>
+                                            <li><span class="message">I'm fine what about you?</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="left">
+                                        <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>Gary 11:13AM</small></li>
+                                            <li><span class="message bg-indigo">Hello, Michael and Frank</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="left">
+                                        <img src="assets/images/xs/avatar5.jpg" class="rounded-circle" alt="">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>Hossein 11:14AM</small></li>
+                                            <li><span class="message bg-amber">Hello, team</span></li>
+                                            <li><span
+                                                    class="message bg-amber">Please let me know your requirements.</span>
+                                            </li>
+                                            <li><span class="message bg-amber">How would like to connect with us?</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="right">
+                                        <ul class="list-unstyled chat_info">
+                                            <li><small>11:15AM</small></li>
+                                            <li><span class="message">Hello, Hossein</span></li>
+                                            <li><span class="message">Meeting on conference room at 12:00PM</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="input-group mt-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);">Tim Hank</a>
+                                        <a class="dropdown-item" href="javascript:void(0);">Hossein Shams</a>
+                                        <a class="dropdown-item" href="javascript:void(0);">John Smith</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter text here..."
+                                       aria-label="Text input with dropdown button">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="zmdi zmdi-mail-send"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+<!--
+            <div class="row clearfix">
+                <div class="col-md-12 col-lg-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Visitors</strong> Statistics</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                        data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                                <li class="remove">
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div id="world-map-markers" class="jvector-map"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Distribution</strong></h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                        data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                        <li><a href="javascript:void(0);">Edit</a></li>
+                                        <li><a href="javascript:void(0);">Delete</a></li>
+                                        <li><a href="javascript:void(0);">Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="remove">
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body text-center">
+                            <div id="chart-pie" class="c3_chart d_distribution"></div>
+                            <button class="btn btn-primary mt-4 mb-4">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+<!--
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Traffic</strong> Source</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
+                                                        data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                        <li><a href="javascript:void(0);">Edit</a></li>
+                                        <li><a href="javascript:void(0);">Delete</a></li>
+                                        <li><a href="javascript:void(0);">Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="remove">
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-6 col-sm-12">
+                                    <div id="chart-area-step" class="c3_chart d_traffic"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <span> More than 30% percent of users come from direct links. Check details page for more information.</span>
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
+                                             aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                    </div>
+                                    <div class="d-flex bd-highlight mt-4">
+                                        <div class="flex-fill bd-highlight">
+                                            <h5 class="mb-0">21,521 <i class="zmdi zmdi-long-arrow-up"></i></h5>
+                                            <small>Today</small>
+                                        </div>
+                                        <div class="flex-fill bd-highlight">
+                                            <h5 class="mb-0">%12.35 <i class="zmdi zmdi-long-arrow-down"></i></h5>
+                                            <small>Last month %</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Jquery Core Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+<!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+
+<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+<script src="assets/js/pages/maps/africamap.js"></script>
+<script src="assets/bundles/sparkline.bundle.js"></script> <!-- Sparkline Plugin Js -->
+<script src="assets/bundles/c3.bundle.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/index.js"></script>
+
+<!--Chart JS-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: 'Delivered',
+                    data: [260, 380, 230, 400, 780, 530, 340, 200, 400, 650, 780, 500],
+                    backgroundColor: '#f9c67b'
+                },
+                    {
+                        label: 'Estimated',
+                        data: [480, 600, 510, 600, 1000, 570, 500, 350, 450, 710, 820, 650],
+                        backgroundColor: '#d8eadc'
+                    }
+                ]
+            },
+            options: {
+                animation: {
+                    delay: 0, // change delay to suit your needs.
+                    duration: 0,
+                },
+                responsive: true,
+                maintainAspectRatio: true,
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 20,
+                        bottom: 0
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            stepSize: 250,
+                            fontColor: "#686868"
+                        }
+                    }],
+                    xAxes: [{
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                            fontColor: "#686868"
+                        },
+                        gridLines: {
+                            display: false,
+                        },
+                        barPercentage: 0.4
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                elements: {
+                    point: {
+                        radius: 0
+                    }
+                },
+                legendCallback: function (chart) {
+                    var text = [];
+                    text.push('<ul class="legend' + chart.id + '">');
+                    for (var i = 0; i < chart.data.datasets.length; i++) {
+                        text.push('<li><span class="legend-label" style="background-color:' + chart.data.datasets[i].backgroundColor + '"></span>');
+                        if (chart.data.datasets[i].label) {
+                            text.push(chart.data.datasets[i].label);
+                        }
+                        text.push('</li>');
+                    }
+                    text.push('</ul>');
+                    return text.join("");
+                },
+            }
+        }
+    );
+</script>
+
 </body>
 
 
