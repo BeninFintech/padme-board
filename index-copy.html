@@ -9,42 +9,21 @@
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
     <title>PADME Dashboard</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
     <link rel="stylesheet" href="assets/plugins/charts-c3/plugin.css"/>
 
-    <!--
-        <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css"/>
-    -->
+    <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css"/>
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link href="assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet"/>
-
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/canaro/canaro.css">
     <link rel="stylesheet" href="jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!--    <script src="https://code.highcharts.com/highcharts.js"></script>-->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
-
-
 </head>
 
 <body class="theme-blush">
@@ -76,8 +55,7 @@
     <ul class="navbar-nav">
         <li><a href="#search" class="main_search" title="Recherche"><i class="zmdi zmdi-search"></i></a></li>
         <li class="dropdown">
-            <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-bs-toggle="offcanvas"
-               data-bs-target="#offcanvasExample" role="button"><i
+            <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-toggle="dropdown" role="button"><i
                     class="zmdi zmdi-apps"></i></a>
             <!--
                         <ul class="dropdown-menu slideUp2">
@@ -308,44 +286,34 @@
 </div>
 
 <!-- Left Sidebar -->
-<aside id="leftsidebar" class="sidebar leftsidebar">
+<aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.html"><img src="https://res.cloudinary.com/aime/image/upload/v1652365739/Frame_ip78zv.png"
-                                  width="90"
+        <a href="index.html"><img src="https://www.padmebenin.org/IMG/siteon0.png?1534235167" width="90"
                                   alt="Aero"><span class="m-l-10"></span></a>
     </div>
     <div class="menu">
         <ul class="list">
-            <!--
-                        <li>
-                            <div class="user-info">
-                                <a class="image" href="#"><img
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAACACAMAAADtR70aAAAANlBMVEX39/enp6eioqLk5OT6+vr9/f2fn5/t7e2qqqrz8/PW1ta6urrp6ena2trNzc3g4OC0tLTCwsI6LbR0AAADVklEQVRoge2bC5KsIAxFFQN+G3X/mx21+3WjI5CfTr2qvhs4dSEmIWBRfPXVJnjpPp617TA+uu4xDoW1N4AtVH4yzplVzrmy7+qLubb2pTHlTsZMXWsvRPblgfjiNr69xi0U/hz5xD6uoMIwRZEbdtY3ax9J5Ga2VqZa7zLMFTuoUlFMZSqMKOaiVo9ZI5GlmdSgxYSFlsYrLTB0ucANqYMOtG3wzLLsVaxaTzC6WK00qDSji1WF5E/a0c2qwq5afOi+oF5utSUaLctGDIVsov9ttRZDZzpUXFotMXZX6CyFAjbVB5qkm1ozoEYIxRe1QE5olBG8C1RYVYGWeF9QYbPEgwq7Fh5UWGj+I6h0eamFbYMKky+MHKiMuZxgOMlBXNsYUHFBtYzlFXdJ5G5Fo+FmfDNmFEPp4Wvkp6i/aMzo/YpGC0reVJVzRUWENnLkYpW2vmbWGGQR19dUCsylISQ5nXSO4tBTjHZKUEooNWrzlT8YdCxW8fVNcZCEtaq1oxsU3T9oDgct7pQqL2o74WqNxmAlEK4V1Yuip2yfpWpG0T/l8r5Opt8LhrRVzalrQE2fj9Un+C9qssbpzu8/snN8cS+5llmVSEzSM1NCNgoVj44S0Fjiv+JzeUNjPYReGT2BRp1ekIze0Ng3c6HTRPQq15dA0S1dPpmrnKbuSi4KX1sks6DxhbZZgNo3uSrja813D1CM/fHO/wxr+lHLLsCjwTaDrlFZZbCPzLoe7Lq5Fk90KhLyucoyLLT0W5kVW/LfWgB08dcUGWzT8fYW2nzXmcBOA2ONLWfoGsp56usdgJkx/jyYbWhmoU4/VMFiKRXPjgrEjdqjw9hyBvcRKrYHZ91QxLGoqZ1CCO3kECdlxtVwjtrlglifme8Vr2Cu1JRX4pMRPDWxr4rfypEa/XJY101IxUfPlyHX3HRulTRiJcudhjDr1pKik23Fv15j6myBQdIn4Ki/vhvW7SxRzRHKuD0k6ziCYb3cIOtwC8d4AcTQvrZSpvQS7Q7siVmYqnYzLs5TJ47CULrje3kqeAkGN63uvtjcErurghcm7U1bGm4q6yEZE/o+aOh212m9I+m+OFrSw6eq3Qf93Gn8CXR6/v5yhz4f6lDdpyD33qbiq6++IusHXE4tH4lCJfUAAAAASUVORK5CYII="
-                                        alt="User"></a>
-                                <div class="detail">
-                                    <h4>Admin</h4>
-                                    <small>Admin</small>
-                                </div>
-                            </div>
-                        </li>
-            -->
-            <li class="active open"><a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+            <li>
+                <div class="user-info">
+                    <a class="image" href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAACACAMAAADtR70aAAAANlBMVEX39/enp6eioqLk5OT6+vr9/f2fn5/t7e2qqqrz8/PW1ta6urrp6ena2trNzc3g4OC0tLTCwsI6LbR0AAADVklEQVRoge2bC5KsIAxFFQN+G3X/mx21+3WjI5CfTr2qvhs4dSEmIWBRfPXVJnjpPp617TA+uu4xDoW1N4AtVH4yzplVzrmy7+qLubb2pTHlTsZMXWsvRPblgfjiNr69xi0U/hz5xD6uoMIwRZEbdtY3ax9J5Ga2VqZa7zLMFTuoUlFMZSqMKOaiVo9ZI5GlmdSgxYSFlsYrLTB0ucANqYMOtG3wzLLsVaxaTzC6WK00qDSji1WF5E/a0c2qwq5afOi+oF5utSUaLctGDIVsov9ttRZDZzpUXFotMXZX6CyFAjbVB5qkm1ozoEYIxRe1QE5olBG8C1RYVYGWeF9QYbPEgwq7Fh5UWGj+I6h0eamFbYMKky+MHKiMuZxgOMlBXNsYUHFBtYzlFXdJ5G5Fo+FmfDNmFEPp4Wvkp6i/aMzo/YpGC0reVJVzRUWENnLkYpW2vmbWGGQR19dUCsylISQ5nXSO4tBTjHZKUEooNWrzlT8YdCxW8fVNcZCEtaq1oxsU3T9oDgct7pQqL2o74WqNxmAlEK4V1Yuip2yfpWpG0T/l8r5Opt8LhrRVzalrQE2fj9Un+C9qssbpzu8/snN8cS+5llmVSEzSM1NCNgoVj44S0Fjiv+JzeUNjPYReGT2BRp1ekIze0Ng3c6HTRPQq15dA0S1dPpmrnKbuSi4KX1sks6DxhbZZgNo3uSrja813D1CM/fHO/wxr+lHLLsCjwTaDrlFZZbCPzLoe7Lq5Fk90KhLyucoyLLT0W5kVW/LfWgB08dcUGWzT8fYW2nzXmcBOA2ONLWfoGsp56usdgJkx/jyYbWhmoU4/VMFiKRXPjgrEjdqjw9hyBvcRKrYHZ91QxLGoqZ1CCO3kECdlxtVwjtrlglifme8Vr2Cu1JRX4pMRPDWxr4rfypEa/XJY101IxUfPlyHX3HRulTRiJcudhjDr1pKik23Fv15j6myBQdIn4Ki/vhvW7SxRzRHKuD0k6ziCYb3cIOtwC8d4AcTQvrZSpvQS7Q7siVmYqnYzLs5TJ47CULrje3kqeAkGN63uvtjcErurghcm7U1bGm4q6yEZE/o+aOh212m9I+m+OFrSw6eq3Qf93Gn8CXR6/v5yhz4f6lDdpyD33qbiq6++IusHXE4tH4lCJfUAAAAASUVORK5CYII="
+                            alt="User"></a>
+                    <div class="detail">
+                        <h4>Admin</h4>
+                        <small>Admin</small>
+                    </div>
+                </div>
+            </li>
+            <li class="active open"><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i
-                    class="fa fa-chart-line"></i><span>Statistiques</span></a>
+                    class="zmdi zmdi-apps"></i><span>Statistiques</span></a>
                 <ul class="ml-menu">
                     <li><a href="#">Tableau</a></li>
                     <li><a href="#">Graphes</a></li>
                 </ul>
             </li>
-            <li><a href="index.html"><i class="fa fa-users"></i><span>Épargnants</span></a></li>
         </ul>
-
-        <!--<ul style="position: absolute; bottom: 5px; list-style-type: symbols(''); padding-left: 8px">
-            <li><a href="" class=""><u><i class="fa fa-file"></i> Docs</u></a></li>
-            <li><small href="" class=""><u>V 1.0</u></small></li>
-        </ul>-->
-
     </div>
 </aside>
 
@@ -510,47 +478,6 @@
     </div>
 </aside>
 
-<!--<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark mb-5">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>-->
-
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
-     aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
-            images, lists, etc.
-        </div>
-        <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
 <!-- Main Content -->
 
 <section class="content">
@@ -558,47 +485,30 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Tableau de bord de suivi des opérations PADME</h2>
-                    <p><span class="font-weight-normal">Dernière actualisation de la page:</span> <span
-                            class="font-weight-light">il y a 5 minutes</span></p>
+                    <h2><i class="ti ti-view-grid"></i> Dashboard</h2>
+                    <!--<ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
+                        <li class="breadcrumb-item active">Dashboard 1</li>
+                    </ul>-->
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                             class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
-                    <button class="btn btn-light btn-icon float-right right_icon_toggle_btn" type="button"><i
+                    <button class="btn btn-outline-success btn-icon float-right right_icon_toggle_btn" type="button"><i
                             class="zmdi zmdi-arrow-right"></i></button>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="card illustration flex-fill">
-                <div class="card-body p-0 d-flex flex-fill"
-                     style="background: linear-gradient(90deg, black, #2ac573);padding: 25px 12px !important;">
-                    <div class="row g-0 w-100">
-                        <div class="col-6">
-                            <div class="illustration-text p-3 m-1">
-                                <h4 class="illustration-text text-white">Bonjour M. Alphonse !</h4>
-                                <p class="mb-0 text-white">AppStack Dashboard</p>
-                            </div>
-                        </div>
-                        <div class="col-6 align-self-end text-end">
-                            <img src="https://res.cloudinary.com/aime/image/upload/v1652428419/Buffer-pana_efhgdr.svg"
-                                 alt="Customer Support"
-                                 class="img-fluid illustration-img" width="200">
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row clearfix">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card dash-card">
+                    <div class="card">
                         <div class="header">
                             <h2 class="font-weight-bold">Tontine digitale</h2>
                             <ul class="header-dropdown">
-
                                 <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
                                                         data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                        aria-expanded="false"> <i class="fa fa-cog"></i> </a>
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
                                         <li><a href="javascript:void(0);">Action</a></li>
                                         <li><a href="javascript:void(0);">Another action</a></li>
@@ -606,124 +516,76 @@
                                     </ul>
                                 </li>
                                 <li class="remove">
-                                    <a role="button" class="boxs-close"><i class="fa fa-close"></i></a>
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="row card-body clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="card widget_2">
                                     <div class="body dash-card-style1 traffic">
-                                        <h1>135</h1>
                                         <h6>Clients enrolés</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#868e96">
-                                        5,2,3,7,6,4,8,1
+                                        <h1>135</h1>
+                                        <!--<hr>
+                                        <h6 class="text-success">Commissions</h6>
+                                        <h2>1.577.379.700,00</h2>
+                                        <div class="progress">
+                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="card widget_2">
                                     <div class="body dash-card-style1">
-                                        <h1>346</h1>
                                         <h6><!--<i class="ti ti-bar-chart"></i>--> Nouveaux comptes tontine</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#2bcbba">
-                                        8,2,6,5,1,4,4,3
+                                        <h1>346</h1>
+<!--
+                                        <hr>
+                                        <h6 class="text-primary"><i class="ti ti-money"></i> Collectés</h6>
+                                        <h2>1.577.379.700,00</h2>
+                                        <div class="progress">
+                                            <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                        </div>
+-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="card widget_2">
                                     <div class="body dash-card-style1">
-                                        <h1>712</h1>
                                         <h6><!--<i class="ti ti-bar-chart"></i>--> Nouveaux plans tontine</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#82c885">
-                                        4,4,3,9,2,1,5,7
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
-                                    <div class="body dash-card-style1">
-                                        <h1>440</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Plans tontine cloturés</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#45aaf2">
-                                        7,5,3,8,4,6,2,9
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
-                                    <div class="body dash-card-style1">
-                                        <h1>67</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Plans arrivés à échéance</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#ff6b6b">
-                                        7,5,3,8,4,6,2,9
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
-                                    <div class="body dash-card-style1">
-                                        <h1>96</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Plans tontine désactivés</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#000">
-                                        7,5,3,8,4,6,2,9
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2 d-flex flex-row justify-content-between align-items-center">
-                                    <div class="body dash-card-style1">
-                                        <h1>378</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Plans tontine en cours</h6>
-                                    </div>
-                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                         data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#000">
-                                        7,5,3,8,4,6,2,9
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>36.712.300 FCFA</h1>
+                                        <h1>712</h1>
+<!--
+                                        <hr>
+                                        <h6 class="text-warning"><i class="ti ti-money"></i> Collectées</h6>
+                                        <h2>1.577.379.700,00</h2>
                                         <div class="progress">
-                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
+                                            <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
                                                  aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                         </div>
-                                        <h6 class="mt-2"><!--<i class="ti ti-bar-chart"></i>--> Total des collectes</h6>
+-->
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="card widget_2">
                                     <div class="body dash-card-style1">
-                                        <h1>12.975.650 FCFA</h1>
+                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                                        <h1>1.577.379.700,00<small class="info">of 1Tb</small></h1>
+                                        <hr>
+                                        <h6 class="text-danger"><i class="ti ti-money"></i> Collectées</h6>
+                                        <h2>1.577.379.700,00<small class="info">of 1Tb</small></h2>
                                         <div class="progress">
-                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
+                                            <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
                                                  aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                         </div>
-                                        <h6 class="mt-2"><!--<i class="ti ti-bar-chart"></i>--> Comissions</h6>
                                     </div>
                                 </div>
                             </div>
-
 
                             <!--                <div class="col-lg-3 col-md-6 col-sm-12">
                                                 <div class="card widget_2">
@@ -792,325 +654,204 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card dash-card">
-                        <div class="header">
-                            <h2 class="font-weight-bold">Collectes de tontine</h2>
-                            <ul class="header-dropdown">
-                                <li>
-
-
-                                    <select class="form-control show-tick" placeholder="Select a person...">
-                                        <option value="4" selected>Barre</option>
-                                        <option value="1">Ligne</option>
-                                        <option value="3">Variations</option>
-                                        <option value="5">Dynamique</option>
-                                    </select>
-
-
-                                </li>
-                                <li>
-
-
-                                    <select class="form-control show-tick" placeholder="Select a person...">
-                                        <option value="4" selected>Ce mois</option>
-                                        <option value="1">3 derniers mois</option>
-                                        <option value="3">6 derniers mois</option>
-                                    </select>
-
-
-                                </li>
-                                <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
-                                                        data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                        aria-expanded="false"> <i class="fa fa-cog"></i> </a>
-                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
-                                    </ul>
-                                </li>
-                                <li class="remove">
-                                    <a role="button" class="boxs-close"><i class="fa fa-close"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 pr-0">
-                                <div class="container"
-                                     style="height: 100%; background-color: #fff; padding: 50px 25px;">
-                                    <!--<div id="basic-last-now" class=""></div>-->
-                                    <div id="column-commissions" class="chart-radius"></div>
-                                    <!--<div id="variation-last-now" class=""></div>-->
-                                </div>
-
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card-style1 traffic">
+                            <h6>Épargne en cours</h6>
+                            <h1>1.577.379.700,00</h1>
+                            <hr>
+                            <h6 class="text-success">Commissions</h6>
+                            <h2>1.577.379.700,00</h2>
+                            <div class="progress">
+                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                             </div>
-                            <div class="col-md-6 pl-0" style="overflow: hidden">
-                                <!--<div class="row card-body py-5 clearfix" style="height: 100%">
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1 traffic">
-                                                <h6>Clients enrolés</h6>
-                                                <h1>135</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Nouveaux comptes tontine</h6>
-                                                <h1>346</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Nouveaux plans tontine</h6>
-                                                <h1>712</h1>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card-style1">
+                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                            <h1>1.577.379.700,00</h1>
+                            <hr>
+                            <h6 class="text-primary"><i class="ti ti-money"></i> Collectés</h6>
+                            <h2>1.577.379.700,00</h2>
+                            <div class="progress">
+                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card-style1">
+                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                            <h1>1.577.379.700,00</h1>
+                            <hr>
+                            <h6 class="text-warning"><i class="ti ti-money"></i> Collectées</h6>
+                            <h2>1.577.379.700,00</h2>
+                            <div class="progress">
+                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card widget_2">
+                        <div class="body dash-card-style1">
+                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                            <h1>1.577.379.700,00<small class="info">of 1Tb</small></h1>
+                            <hr>
+                            <h6 class="text-danger"><i class="ti ti-money"></i> Collectées</h6>
+                            <h2>1.577.379.700,00<small class="info">of 1Tb</small></h2>
+                            <div class="progress">
+                                <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Plans tontine cloturés</h6>
-                                                <h1>440</h1>
+                <!--                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card widget_2">
+                                        <div class="body dash-card-style1">
+                                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                                            <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
+                                            &lt;!&ndash;<hr>
+                                            <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
+                                            <h2>1.577.379.700,00</h2>&ndash;&gt;
+                                            <div class="progress">
+                                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
+                                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Plans arrivés à échéance</h6>
-                                                <h1>67</h1>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card widget_2">
+                                        <div class="body dash-card-style1">
+                                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                                            <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
+                                            &lt;!&ndash;<hr>
+                                            <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
+                                            <h2>1.577.379.700,00</h2>&ndash;&gt;
+                                            <div class="progress">
+                                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
+                                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Plans tontine désactivés</h6>
-                                                <h1>96</h1>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card widget_2">
+                                        <div class="body dash-card-style1">
+                                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                                            <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
+                                            &lt;!&ndash;<hr>
+                                            <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
+                                            <h2>1.577.379.700,00</h2>&ndash;&gt;
+                                            <div class="progress">
+                                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
+                                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Plans tontine en cours</h6>
-                                                <h1>378</h1>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card widget_2">
+                                        <div class="body dash-card-style1">
+                                            <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
+                                            <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
+                                            &lt;!&ndash;<hr>
+                                            <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
+                                            <h2>1.577.379.700,00</h2>&ndash;&gt;
+                                            <div class="progress">
+                                                <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
+                                                     aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Total des collectes</h6>
-                                                <h1>36.712.300</h1>
-                                                <div class="progress">
-                                                    <div class="progress-bar l-green" role="progressbar"
-                                                         aria-valuenow="45"
-                                                         aria-valuemin="0" aria-valuemax="100"
-                                                         style="width: 45%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                        <div class="card widget_2">
-                                            <div class="body dash-card-style1">
-                                                <h6>&lt;!&ndash;<i class="ti ti-bar-chart"></i>&ndash;&gt; Comissions</h6>
-                                                <h1>12.975.650</h1>
-                                                <div class="progress">
-                                                    <div class="progress-bar l-green" role="progressbar"
-                                                         aria-valuenow="45"
-                                                         aria-valuemin="0" aria-valuemax="100"
-                                                         style="width: 45%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    &lt;!&ndash;                <div class="col-lg-3 col-md-6 col-sm-12">
-                                                        <div class="card widget_2">
-                                                            <div class="body dash-card-style1">
-                                                                <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                                <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                                &lt;!&ndash;<hr>
-                                                                <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                                <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                                <div class="progress">
-                                                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
-                                                                         aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                                        <div class="card widget_2">
-                                                            <div class="body dash-card-style1">
-                                                                <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                                <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                                &lt;!&ndash;<hr>
-                                                                <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                                <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                                <div class="progress">
-                                                                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
-                                                                         aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                                        <div class="card widget_2">
-                                                            <div class="body dash-card-style1">
-                                                                <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                                <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                                &lt;!&ndash;<hr>
-                                                                <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                                <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                                <div class="progress">
-                                                                    <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
-                                                                         aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                                        <div class="card widget_2">
-                                                            <div class="body dash-card-style1">
-                                                                <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                                <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                                &lt;!&ndash;<hr>
-                                                                <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                                <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                                <div class="progress">
-                                                                    <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
-                                                                         aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>&ndash;&gt;
                                 </div>-->
-
-                                <div class="p-3">
-                                    <h6>Collectes par agence</h6>
-                                    <p class="text-light text-small">Montant des plans tontine par agence </p>
-                                </div>
-                                <div class="row card-body py-5 clearfix" style="height: 100%; overflow: scroll">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class=" table-light">
-                                            <tr>
-                                                <th>Agences</th>
-                                                <th>En cours</th>
-                                                <th>Nouveaux plans</th>
-                                                <th>Cloturés</th>
-                                                <th>Arrivés à échéance</th>
-                                                <th>Désactivés</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>Cotonou</td>
-                                                <td>123</td>
-                                                <td>73</td>
-                                                <td>54</td>
-                                                <td>12</td>
-                                                <td>19</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Calavi</td>
-                                                <td>123</td>
-                                                <td>73</td>
-                                                <td>54</td>
-                                                <td>12</td>
-                                                <td>19</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Porto-Novo</td>
-                                                <td>123</td>
-                                                <td>73</td>
-                                                <td>54</td>
-                                                <td>12</td>
-                                                <td>19</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Parakou</td>
-                                                <td>123</td>
-                                                <td>73</td>
-                                                <td>54</td>
-                                                <td>12</td>
-                                                <td>19</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Natitingou</td>
-                                                <td>123</td>
-                                                <td>73</td>
-                                                <td>54</td>
-                                                <td>12</td>
-                                                <td>19</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
-
             <div class="row clearfix">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card dash-card">
-                        <div class="header">
-                            <h2 class="font-weight-bold">Épargne à Vue</h2>
-                            <ul class="header-dropdown">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <!--<div class="header">
+                            <h2><strong><i class="zmdi zmdi-chart"></i> Statistiques</strong> des tontines</h2>
+                            &lt;!&ndash;<ul class="header-dropdown">
                                 <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
                                                         data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                        aria-expanded="false"> <i class="fa fa-cog"></i> </a>
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                        <li><a href="javascript:void(0);">Editer</a></li>
+                                        <li><a href="javascript:void(0);">Supprimer</a></li>
+                                        <li><a href="javascript:void(0);">Report</a></li>
                                     </ul>
                                 </li>
                                 <li class="remove">
-                                    <a role="button" class="boxs-close"><i class="fa fa-close"></i></a>
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
                                 </li>
-                            </ul>
-                        </div>
-
-                        <div class="row card-body clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1 traffic">
-                                        <h1>135</h1>
-                                        <h6>Livrets dématérialisés</h6>
+                            </ul>&ndash;&gt;
+                        </div>-->
+                        <div class="body mb-2">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>2,365</h5>
+                                                <span><i class="zmdi zmdi-balance"></i> Recettes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#868e96">
+                                                5,2,3,7,6,4,8,1
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>346</h1>
-                                        <h6>Nouveaux comptes EAV</h6>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>365</h5>
+                                                <span><i class="zmdi zmdi-turning-sign"></i> Collectes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#2bcbba">
+                                                8,2,6,5,1,4,4,3
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>712</h1>
-                                        <h6>Total de dépôts</h6>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>65</h5>
+                                                <span><i class="zmdi zmdi-alert-circle-o"></i> Requêtes</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#82c885">
+                                                4,4,3,9,2,1,5,7
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="state_w1 mb-1 mt-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5>2,055</h5>
+                                                <span><i class="zmdi zmdi-print"></i> Crédits</span>
+                                            </div>
+                                            <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
+                                                 data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#45aaf2">
+                                                7,5,3,8,4,6,2,9
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1122,13 +863,13 @@
 
             <div class="row clearfix">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card dash-card">
+                    <div class="card">
                         <div class="header">
-                            <h2 class="font-weight-bold">Avance et Crédit sur tontine</h2>
+                            <h2><strong>Recent</strong> Orders</h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
                                                         data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                        aria-expanded="false"> <i class="fa fa-cog"></i> </a>
+                                                        aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
                                         <li><a href="javascript:void(0);">Action</a></li>
                                         <li><a href="javascript:void(0);">Another action</a></li>
@@ -1136,664 +877,352 @@
                                     </ul>
                                 </li>
                                 <li class="remove">
-                                    <a role="button" class="boxs-close"><i class="fa fa-close"></i></a>
+                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="row card-body clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1 traffic">
-                                        <h1>135</h1>
-                                        <h6>Avances mises en place</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>346</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Crédits mis en place</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>712</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Avances échues impayées</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1 traffic">
-                                        <h1>135</h1>
-                                        <h6>Encours impayés sur crédit</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>346</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Remboursements attendus</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1>712</h1>
-                                        <div class="progress">
-                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                        </div>
-                                        <h6 class="mt-2"><!--<i class="ti ti-bar-chart"></i>--> Remboursements
-                                            reçus</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1 class="text-danger"><i class="fa fa-arrow-down"></i> 0.0%</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>--> Taux de respect des échéances</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 card-tab">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h1 class="text-success"><i class="fa fa-arrow-up"></i> 74%</h1>
-                                        <h6><!--<i class="ti ti-bar-chart"></i>-->Taux de remboursement</h6>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover c_table dataTable js-exportable">
+                                <thead>
+                                <tr>
+                                    <th style="width:60px;">#</th>
+                                    <th>Name</th>
+                                    <th>Item</th>
+                                    <th>Address</th>
+                                    <th>Quantity</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
+                                    <td>Hossein</td>
+                                    <td>IPONE-7</td>
+                                    <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
+                                    <td>3</td>
+                                    <td><span class="badge badge-success">DONE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
+                                    <td>Camara</td>
+                                    <td>NOKIA-8</td>
+                                    <td>2595 Pearlman Avenue Sudbury, MA 01776</td>
+                                    <td>3</td>
+                                    <td><span class="badge badge-success">DONE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
+                                    <td>Maryam</td>
+                                    <td>NOKIA-456</td>
+                                    <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
+                                    <td>4</td>
+                                    <td><span class="badge badge-success">DONE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
+                                    <td>Micheal</td>
+                                    <td>SAMSANG PRO</td>
+                                    <td>508 Virginia Street Chicago, IL 60653</td>
+                                    <td>1</td>
+                                    <td><span class="badge badge-success">DONE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
+                                    <td>Frank</td>
+                                    <td>NOKIA-456</td>
+                                    <td>1516 Holt Street West Palm Beach, FL 33401</td>
+                                    <td>13</td>
+                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <!--
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1 traffic">
-                                        <h6>Épargne en cours</h6>
-                                        <h1>1.577.379.700,00</h1>
-                                        <hr>
-                                        <h6 class="text-success">Commissions</h6>
-                                        <h2>1.577.379.700,00</h2>
-                                        <div class="progress">
-                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                        <h1>1.577.379.700,00</h1>
-                                        <hr>
-                                        <h6 class="text-primary"><i class="ti ti-money"></i> Collectés</h6>
-                                        <h2>1.577.379.700,00</h2>
-                                        <div class="progress">
-                                            <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                        <h1>1.577.379.700,00</h1>
-                                        <hr>
-                                        <h6 class="text-warning"><i class="ti ti-money"></i> Collectées</h6>
-                                        <h2>1.577.379.700,00</h2>
-                                        <div class="progress">
-                                            <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card widget_2">
-                                    <div class="body dash-card-style1">
-                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                        <h1>1.577.379.700,00<small class="info">of 1Tb</small></h1>
-                                        <hr>
-                                        <h6 class="text-danger"><i class="ti ti-money"></i> Collectées</h6>
-                                        <h2>1.577.379.700,00<small class="info">of 1Tb</small></h2>
-                                        <div class="progress">
-                                            <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            &lt;!&ndash;                <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <div class="card widget_2">
-                                                    <div class="body dash-card-style1">
-                                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                        <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                        &lt;!&ndash;<hr>
-                                                        <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                        <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                        <div class="progress">
-                                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="45"
-                                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <div class="card widget_2">
-                                                    <div class="body dash-card-style1">
-                                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                        <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                        &lt;!&ndash;<hr>
-                                                        <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                        <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                        <div class="progress">
-                                                            <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
-                                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <div class="card widget_2">
-                                                    <div class="body dash-card-style1">
-                                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                        <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                        &lt;!&ndash;<hr>
-                                                        <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                        <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                        <div class="progress">
-                                                            <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45"
-                                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <div class="card widget_2">
-                                                    <div class="body dash-card-style1">
-                                                        <h6><i class="ti ti-bar-chart"></i> Prévisions</h6>
-                                                        <h1>1.577.379.700,00 / <small>1.577.379.700,00</small></h1>
-                                                        &lt;!&ndash;<hr>
-                                                        <small class="text-uppercase"><i class="ti ti-money"></i> Collectées</small>
-                                                        <h2>1.577.379.700,00</h2>&ndash;&gt;
-                                                        <div class="progress">
-                                                            <div class="progress-bar l-pink" role="progressbar" aria-valuenow="45"
-                                                                 aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>&ndash;&gt;
-                        </div>
-            -->
-            <!--
-                        <div class="row clearfix">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    &lt;!&ndash;<div class="header">
-                                        <h2><strong><i class="zmdi zmdi-chart"></i> Statistiques</strong> des tontines</h2>
-                                        &lt;!&ndash;<ul class="header-dropdown">
-                                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
-                                                                    data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                                    aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                                <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                                    <li><a href="javascript:void(0);">Editer</a></li>
-                                                    <li><a href="javascript:void(0);">Supprimer</a></li>
-                                                    <li><a href="javascript:void(0);">Report</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="remove">
-                                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                            </li>
-                                        </ul>&ndash;&gt;
-                                    </div>&ndash;&gt;
-                                    <div class="body mb-2">
-                                        <div class="row clearfix">
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                                <div class="state_w1 mb-1 mt-1">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div>
-                                                            <h5>2,365</h5>
-                                                            <span><i class="zmdi zmdi-balance"></i> Recettes</span>
-                                                        </div>
-                                                        <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                                             data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#868e96">
-                                                            5,2,3,7,6,4,8,1
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                                <div class="state_w1 mb-1 mt-1">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div>
-                                                            <h5>365</h5>
-                                                            <span><i class="zmdi zmdi-turning-sign"></i> Collectes</span>
-                                                        </div>
-                                                        <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                                             data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#2bcbba">
-                                                            8,2,6,5,1,4,4,3
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                                <div class="state_w1 mb-1 mt-1">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div>
-                                                            <h5>65</h5>
-                                                            <span><i class="zmdi zmdi-alert-circle-o"></i> Requêtes</span>
-                                                        </div>
-                                                        <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                                             data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#82c885">
-                                                            4,4,3,9,2,1,5,7
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                                <div class="state_w1 mb-1 mt-1">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div>
-                                                            <h5>2,055</h5>
-                                                            <span><i class="zmdi zmdi-print"></i> Crédits</span>
-                                                        </div>
-                                                        <div class="sparkline" data-type="bar" data-width="97%" data-height="55px"
-                                                             data-bar-Width="3" data-bar-Spacing="5" data-bar-Color="#45aaf2">
-                                                            7,5,3,8,4,6,2,9
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-            -->
-            <!--
-
-                        <div class="row clearfix">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="card">
-                                    <div class="header">
-                                        <h2><strong>Recent</strong> Orders</h2>
-                                        <ul class="header-dropdown">
-                                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle"
-                                                                    data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                                    aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                                <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                                    <li><a href="javascript:void(0);">Action</a></li>
-                                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="remove">
-                                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table class="table table-hover c_table dataTable js-exportable">
-                                            <thead>
-                                            <tr>
-                                                <th style="width:60px;">#</th>
-                                                <th>Name</th>
-                                                <th>Item</th>
-                                                <th>Address</th>
-                                                <th>Quantity</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                                <td>Hossein</td>
-                                                <td>IPONE-7</td>
-                                                <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
-                                                <td>3</td>
-                                                <td><span class="badge badge-success">DONE</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                                <td>Camara</td>
-                                                <td>NOKIA-8</td>
-                                                <td>2595 Pearlman Avenue Sudbury, MA 01776</td>
-                                                <td>3</td>
-                                                <td><span class="badge badge-success">DONE</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                                <td>Maryam</td>
-                                                <td>NOKIA-456</td>
-                                                <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
-                                                <td>4</td>
-                                                <td><span class="badge badge-success">DONE</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                                <td>Micheal</td>
-                                                <td>SAMSANG PRO</td>
-                                                <td>508 Virginia Street Chicago, IL 60653</td>
-                                                <td>1</td>
-                                                <td><span class="badge badge-success">DONE</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                                <td>Frank</td>
-                                                <td>NOKIA-456</td>
-                                                <td>1516 Holt Street West Palm Beach, FL 33401</td>
-                                                <td>13</td>
-                                                <td><span class="badge badge-warning">PENDING</span></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="classic-header">
+                        <h2><strong><i class="ti ti-bar-chart-alt"></i> Statistiques</strong> des Collectes</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <div id="basic-last-now" class="chart-radius">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <div id="variation-last-now" class="chart-radius">
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 mt-4">
+                    <div id="" class="table-responsive table-radius bg-white p-4">
+                        <table class="table text-black dataTable js-exportable">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th>Agence</th>
+                                <th><span class="nowrap"> Avr, 14</span></th>
+                                <th><span class="nowrap"> Mar, 14</span></th>
+                                <th>Taux</th>
+                                <th><span class="nowrap">Frais Avr</span></th>
+                                <th><span class="nowrap">Frais Mar</span></th>
+                                <th>Taux</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="classic-header">
-                                    <h2><strong><i class="ti ti-bar-chart-alt"></i> Statistiques</strong> des Collectes</h2>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div id="basic-last-now" class="chart-radius">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div id="variation-last-now" class="chart-radius">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-12 mt-4">
-                                <div id="" class="table-responsive table-radius bg-white p-4">
-                                    <table class="table text-black dataTable js-exportable">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>Agence</th>
-                                            <th><span class="nowrap"> Avr, 14</span></th>
-                                            <th><span class="nowrap"> Mar, 14</span></th>
-                                            <th>Taux</th>
-                                            <th><span class="nowrap">Frais Avr</span></th>
-                                            <th><span class="nowrap">Frais Mar</span></th>
-                                            <th>Taux</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
+                            <tr>
+
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/42/"> <span
+                                        class="nowrap">  TIKOPE</span> </a></td>
+                                <!-- <td width="350px">TIKOPE</td> -->
+                                <td><span class="nowrap"> 57,962,900.00</span></td>
+                                <td><span class="nowrap"> 55,374,900.00</span></td>
+                                <!-- <td><span class="nowrap"> 2,588,000.00</span></td> -->
+                                <td><span class="nowrap"> 4.46 %</span></td>
+                                <td><span class="nowrap"> 4,311,800.00</span></td>
+                                <td><span class="nowrap"> 4,429,000.00</span></td>
+                                <!-- <td><span class="nowrap">- 117,200.00</span></td> -->
+                                <td><span class="nowrap">- 2.72%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/42/"> <span
-                                                    class="nowrap">  TIKOPE</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">TIKOPE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 57,962,900.00</span></td>
-                                            <td><span class="nowrap"> 55,374,900.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 2,588,000.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 4.46 %</span></td>
-                                            <td><span class="nowrap"> 4,311,800.00</span></td>
-                                            <td><span class="nowrap"> 4,429,000.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 117,200.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 2.72%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/41/"> <span
-                                                    class="nowrap">  IE-VILLE</span></a></td>
-                                            &lt;!&ndash; <td width="350px">IE-VILLE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 19,135,400.00</span></td>
-                                            <td><span class="nowrap"> 18,485,000.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 650,400.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 3.40 %</span></td>
-                                            <td><span class="nowrap"> 1,487,700.00</span></td>
-                                            <td><span class="nowrap"> 1,542,300.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 54,600.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 3.67%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/41/"> <span
+                                        class="nowrap">  IE-VILLE</span></a></td>
+                                <!-- <td width="350px">IE-VILLE</td> -->
+                                <td><span class="nowrap"> 19,135,400.00</span></td>
+                                <td><span class="nowrap"> 18,485,000.00</span></td>
+                                <!-- <td><span class="nowrap"> 650,400.00</span></td> -->
+                                <td><span class="nowrap"> 3.40 %</span></td>
+                                <td><span class="nowrap"> 1,487,700.00</span></td>
+                                <td><span class="nowrap"> 1,542,300.00</span></td>
+                                <!-- <td><span class="nowrap">- 54,600.00</span></td> -->
+                                <td><span class="nowrap">- 3.67%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/43/"> <span
-                                                    class="nowrap">  TOVE</span></a></td>
-                                            &lt;!&ndash; <td width="350px">SION TOVE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 4,622,600.00</span></td>
-                                            <td><span class="nowrap"> 5,047,900.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 425,300.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 9.20 %</span></td>
-                                            <td><span class="nowrap"> 331,000.00</span></td>
-                                            <td><span class="nowrap"> 339,400.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 8,400.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 2.54%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/44/"> <span
-                                                    class="nowrap">  TE</span></a></td>
-                                            &lt;!&ndash; <td width="350px">TE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 1,649,600.00</span></td>
-                                            <td><span class="nowrap"> 1,670,500.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 20,900.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 1.27 %</span></td>
-                                            <td><span class="nowrap"> 121,900.00</span></td>
-                                            <td><span class="nowrap"> 130,000.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap">- 8,100.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap">- 6.64%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/43/"> <span
+                                        class="nowrap">  TOVE</span></a></td>
+                                <!-- <td width="350px">SION TOVE</td> -->
+                                <td><span class="nowrap"> 4,622,600.00</span></td>
+                                <td><span class="nowrap"> 5,047,900.00</span></td>
+                                <!-- <td><span class="nowrap">- 425,300.00</span></td> -->
+                                <td><span class="nowrap">- 9.20 %</span></td>
+                                <td><span class="nowrap"> 331,000.00</span></td>
+                                <td><span class="nowrap"> 339,400.00</span></td>
+                                <!-- <td><span class="nowrap">- 8,400.00</span></td> -->
+                                <td><span class="nowrap">- 2.54%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/79/"> <span
-                                                    class="nowrap">  OLI</span></a></td>
-                                            &lt;!&ndash; <td width="350px">OLI</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/57/"> <span
-                                                    class="nowrap">  HERE</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">HERE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/44/"> <span
+                                        class="nowrap">  TE</span></a></td>
+                                <!-- <td width="350px">TE</td> -->
+                                <td><span class="nowrap"> 1,649,600.00</span></td>
+                                <td><span class="nowrap"> 1,670,500.00</span></td>
+                                <!-- <td><span class="nowrap">- 20,900.00</span></td> -->
+                                <td><span class="nowrap">- 1.27 %</span></td>
+                                <td><span class="nowrap"> 121,900.00</span></td>
+                                <td><span class="nowrap"> 130,000.00</span></td>
+                                <!-- <td><span class="nowrap">- 8,100.00</span></td> -->
+                                <td><span class="nowrap">- 6.64%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/58/"> <span
-                                                    class="nowrap">  OLO</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">OLO</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/45/"> <span
-                                                    class="nowrap">  NAOLO</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">NAOLO</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/79/"> <span
+                                        class="nowrap">  OLI</span></a></td>
+                                <!-- <td width="350px">OLI</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/66/"> <span
-                                                    class="nowrap">  GNOHOU</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">GNOHOU</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/65/"> <span
-                                                    class="nowrap">  OU</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">OU</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/57/"> <span
+                                        class="nowrap">  HERE</span> </a></td>
+                                <!-- <td width="350px">HERE</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
 
 
-                                        <tr>
+                            <tr>
 
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/78/"> <span
-                                                    class="nowrap">  AMBA</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">AMBA</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
-
-
-                                        <tr>
-
-                                            <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/87/"> <span
-                                                    class="nowrap">  VILLE</span> </a></td>
-                                            &lt;!&ndash; <td width="350px">ONG VILLE</td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00 %</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            <td><span class="nowrap"> 0.00</span></td>
-                                            &lt;!&ndash; <td><span class="nowrap"> 0.00</span></td> &ndash;&gt;
-                                            <td><span class="nowrap"> 0.00%</span></td>
-                                        </tr>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/58/"> <span
+                                        class="nowrap">  OLO</span> </a></td>
+                                <!-- <td width="350px">OLO</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
 
 
-                                        </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            &lt;!&ndash; <th width="350px"><a href="#"><font color='#824040'><span class="nowrap"><i class="novaFont">&#xf14a;</i> Total</span>  </a></th> &ndash;&gt;
-                                            <th></th>
-                                            &lt;!&ndash; <td width="350px">Total</td> &ndash;&gt;
-                                            <th><span class="nowrap"><strong> 83,370,500.00</strong></span></th>
-                                            <th><span class="nowrap"><strong> 80,578,300.00</strong></span></th>
-                                            &lt;!&ndash; <td><span class="nowrap"> 2,792,200.00</span></td> &ndash;&gt;
-                                            <th><span class="nowrap"><strong> 3.35 %</strong></span></th>
-                                            <th><span class="nowrap"><strong> 6,252,400.00</strong></span></th>
-                                            <th><span class="nowrap"><strong> 6,440,700.00</strong></span></th>
-                                            &lt;!&ndash; <td><span class="nowrap">- 188,300.00</span></td> &ndash;&gt;
-                                            <th><span class="nowrap"><strong>- 3.01%</strong></span></th>
-                                        </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                            <tr>
 
-                        <div class="row my-5">
-                            <div class="col-12">
-                                <div class="classic-header">
-                                    <h2><strong><i class="ti ti-bar-chart-alt"></i> Souscripteurs</strong> 14.04.2022</h2>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div id="pie-age" class="chart-radius">
-                                </div>
-                            </div>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/45/"> <span
+                                        class="nowrap">  NAOLO</span> </a></td>
+                                <!-- <td width="350px">NAOLO</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
 
-                            <div class="col-12 col-md-6 mb-3">
-                                <div id="pie-age2" class="chart-radius">
-                                </div>
-                            </div>
 
-                        </div>
+                            <tr>
 
-                        <div class="row my-5">
-                            <div class="col-12">
-                                <div id="dynamic-1" class="chart-radius"></div>
-                            </div>
-                        </div>
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/66/"> <span
+                                        class="nowrap">  GNOHOU</span> </a></td>
+                                <!-- <td width="350px">GNOHOU</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
 
-                        <div class="row my-5">
-                            <div class="col-12">
-                                <div class="classic-header">
-                                    <h2><strong><i class="ti ti-bar-chart-alt"></i> Commissions </strong> 14.04.2022</h2>
-                                </div>
-                            </div>
 
-                            <div class="col-12 col-md-6 mb-3">
-                                <div id="column-commissions" class="chart-radius">
-                                </div>
-                            </div>
+                            <tr>
 
-                        </div>
-            -->
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/65/"> <span
+                                        class="nowrap">  OU</span> </a></td>
+                                <!-- <td width="350px">OU</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
+
+
+                            <tr>
+
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/78/"> <span
+                                        class="nowrap">  AMBA</span> </a></td>
+                                <!-- <td width="350px">AMBA</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
+
+
+                            <tr>
+
+                                <td width="350px"><a href="/%2Fitax/itax_equipment_dashboard/87/"> <span
+                                        class="nowrap">  VILLE</span> </a></td>
+                                <!-- <td width="350px">ONG VILLE</td> -->
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00 %</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <td><span class="nowrap"> 0.00</span></td>
+                                <!-- <td><span class="nowrap"> 0.00</span></td> -->
+                                <td><span class="nowrap"> 0.00%</span></td>
+                            </tr>
+
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <!-- <th width="350px"><a href="#"><font color='#824040'><span class="nowrap"><i class="novaFont">&#xf14a;</i> Total</span>  </a></th> -->
+                                <th></th>
+                                <!-- <td width="350px">Total</td> -->
+                                <th><span class="nowrap"><strong> 83,370,500.00</strong></span></th>
+                                <th><span class="nowrap"><strong> 80,578,300.00</strong></span></th>
+                                <!-- <td><span class="nowrap"> 2,792,200.00</span></td> -->
+                                <th><span class="nowrap"><strong> 3.35 %</strong></span></th>
+                                <th><span class="nowrap"><strong> 6,252,400.00</strong></span></th>
+                                <th><span class="nowrap"><strong> 6,440,700.00</strong></span></th>
+                                <!-- <td><span class="nowrap">- 188,300.00</span></td> -->
+                                <th><span class="nowrap"><strong>- 3.01%</strong></span></th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="classic-header">
+                        <h2><strong><i class="ti ti-bar-chart-alt"></i> Souscripteurs</strong> 14.04.2022</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <div id="pie-age" class="chart-radius">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div id="pie-age2" class="chart-radius">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12">
+                    <div id="dynamic-1" class="chart-radius"></div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="classic-header">
+                        <h2><strong><i class="ti ti-bar-chart-alt"></i> Commissions </strong> 14.04.2022</h2>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div id="column-commissions" class="chart-radius">
+                    </div>
+                </div>
+
+            </div>
 
             <!--            <div class="row my-5">-->
             <!--                <div class="col-12">-->
@@ -2059,32 +1488,13 @@
 <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
 
-<!--
-<script src="assets/bundles/jvectormap.bundle.js"></script> &lt;!&ndash; JVectorMap Plugin Js &ndash;&gt;
-<script src="assets/js/pages/maps/africamap.js"></script>
-<script src="assets/bundles/sparkline.bundle.js"></script> &lt;!&ndash; Sparkline Plugin Js &ndash;&gt;
-<script src="assets/bundles/c3.bundle.js"></script>
--->
-
-<!--
-<script src="assets/bundles/knob.bundle.js"></script> &lt;!&ndash; Jquery Knob Plugin Js &ndash;&gt;
--->
-
-<script src="assets/js/pages/index.js"></script>
-<script src="assets/js/pages/charts/jquery-knob.min.js"></script>
-
-<script src="assets/plugins/momentjs/moment.js"></script>
-
 <script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
 <script src="assets/js/pages/maps/africamap.js"></script>
 <script src="assets/bundles/sparkline.bundle.js"></script> <!-- Sparkline Plugin Js -->
 <script src="assets/bundles/c3.bundle.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/index.js"></script>
 <!-- Jquery DataTable Plugin Js -->
 <script src="assets/bundles/datatablescripts.bundle.js"></script>
 <script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
@@ -2101,8 +1511,7 @@
 <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/basic-form-elements.js"></script>
+
 <!--
 <script>
     const myChart = new Chart(
